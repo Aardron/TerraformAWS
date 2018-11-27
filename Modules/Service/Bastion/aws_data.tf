@@ -7,7 +7,3 @@ data "terraform_remote_state" "vpc" {
     }
 }
 
-provider "aws" {
-  region     =  "${var.aws_region}"
-}
-
