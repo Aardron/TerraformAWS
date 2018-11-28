@@ -6,5 +6,5 @@ resource "aws_autoscaling_group" "autoscaling_group" {
   force_delete              = false
   launch_configuration      = "${aws_launch_configuration.launch_config.id}"
   load_balancers            = [ "${aws_elb.elb.id}" ]
-
+  vpc_zone_identifier       = ["${data.terraform_remote_state.vpc.public_subnet}"]
 }

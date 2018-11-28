@@ -1,6 +1,6 @@
 resource "aws_security_group" "instance" {
   name = "terraform-example-instance"
-
+  vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
   ingress {
     from_port   = 8080
     to_port     = 8080
@@ -18,7 +18,7 @@ resource "aws_security_group" "instance" {
 
 resource "aws_security_group" "elb" {
   name = "terraform-example-elb"
-
+  vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
   egress {
     from_port   = 0
     to_port     = 0
