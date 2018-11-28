@@ -4,7 +4,7 @@ variable "instanceName" {
 
 variable "bastion_ami" {
   description = "AMI for bastion"
-  default     = "ami-00103874"
+  default     = "ami-02790d1ebf3b5181d"
   }
 
 variable "env" {
@@ -33,5 +33,9 @@ variable "egress_from_port" {
 
 variable "egress_to_port" {
   default = 22
+}
+
+variable "root_password" {
+  default ="scam"
 }
 
