@@ -21,3 +21,9 @@ resource "aws_security_group" "elb" {
     cidr_blocks = ["213.86.15.34/32"]
   }
 }
+
+resource "aws_security_group" "jenkins" {
+  name = "terraform-example-jenkins"
+  vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
+
+}
