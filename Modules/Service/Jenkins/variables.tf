@@ -2,7 +2,7 @@ variable "instanceName" {
   default = "t2.micro"
 }
 
-variable "Jenkins_ami" {
+variable "jenkins_ami" {
   description = "AMI for Jenkins"
   default     = "ami-2757f631"
   }
