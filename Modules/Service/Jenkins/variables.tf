@@ -4,7 +4,7 @@ variable "instanceName" {
 
 variable "jenkins_ami" {
   description = "AMI for Jenkins"
-  default     = "ami-2757f631"
+  default     = "ami-02790d1ebf3b5181d"
   }
 
 variable "env" {

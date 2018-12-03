@@ -1,11 +1,11 @@
 resource "aws_security_group" "instance" {
-  name = "terraform-example-instance"
+  name = "terraform-jenkins-instance"
   vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
 
 }
 
 resource "aws_security_group" "elb" {
-  name = "terraform-example-elb"
+  name = "terraform-jenkins-elb"
   vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
   egress {
     from_port   = 0
@@ -23,7 +23,7 @@ resource "aws_security_group" "elb" {
 }
 
 resource "aws_security_group" "bastion" {
-  name = "terraform-example-jenkins"
+  name = "terraform-jenkins-bastion"
   vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
 
 }

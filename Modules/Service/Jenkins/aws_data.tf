@@ -7,3 +7,11 @@ data "terraform_remote_state" "vpc" {
     }
 }
 
+data "terraform_remote_state" "bast" {
+  backend = "s3"
+    config{
+    bucket = "my-booky-wooky"
+    key    = "Management/Service/Bastion/terraform.tfstate"
+    region = "eu-west-1"
+    }
+}
