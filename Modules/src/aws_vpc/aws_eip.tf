@@ -1,3 +1,3 @@
-# resource "aws_eip" "eip" {
-#   vpc = true
-# }
+resource "aws_eip" "eip" {
+  vpc = true
+}

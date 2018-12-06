@@ -8,6 +8,8 @@ resource "aws_db_instance" "default" {
   username             = "root"
   password             = "password"
   port                 = "3030"
-  db_subnet_group_name = "${aws_db_subnet_group.rds_subnet.name}"
-
+  skip_final_snapshot  = true
+  final_snapshot_identifier = "Ignore"
+  db_subnet_group_name = "${aws_db_subnet_group.rds_subnet.id}"
+  vpc_security_group_ids    = ["${aws_security_group.instance.id}"]
 }

@@ -10,4 +10,7 @@ variable "aws_region" {
   default = "eu-west-3"  
 }
 
+# variable "vpc_private_subnet_ids" {
+#   default = "${data.terraform_remote_state.vpc.private_subnet}"
+# }
 
