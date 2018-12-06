@@ -4,7 +4,7 @@ variable "instanceName" {
 
 variable "jenkins_ami" {
   description = "AMI for Jenkins"
-  default     = "ami-02790d1ebf3b5181d"
+  default     = "ami-06328f1e652dc7605"
   }
 
 variable "env" {
@@ -35,3 +35,6 @@ variable "egress_to_port" {
   default = 80
 }
 
+variable "my_ip" {
+  default = "89.21.8.5/32"
+}

@@ -4,7 +4,7 @@ variable "instanceName" {
 
 variable "bastion_ami" {
   description = "AMI for bastion"
-  default     = "ami-02790d1ebf3b5181d"
+  default     = "ami-06328f1e652dc7605"
   }
 
 variable "env" {
@@ -39,3 +39,6 @@ variable "root_password" {
   default ="scam"
 }
 
+variable "my_ip" {
+  default = "89.21.8.5/32"
+}

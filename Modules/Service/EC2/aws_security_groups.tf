@@ -1,11 +1,11 @@
 resource "aws_security_group" "instance" {
-  name = "terraform-jenkins-instance"
+  name = "terraform-EC2-instance"
   vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
 
 }
 
 resource "aws_security_group" "elb" {
-  name = "terraform-jenkins-elb"
+  name = "terraform-EC2-elb"
   vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
   egress {
     from_port   = 0
@@ -20,10 +20,4 @@ resource "aws_security_group" "elb" {
     protocol    = "tcp"
     cidr_blocks = ["${var.my_ip}"]
   }
-}
-
-resource "aws_security_group" "bastion" {
-  name = "terraform-jenkins-bastion"
-  vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
-
 }
