@@ -23,7 +23,7 @@ resource "aws_security_group" "elb" {
 }
 
 resource "aws_security_group" "bastion" {
-  name = "terraform-jenkins-bastion"
+  name = "terraform-jenkins-bastion-link"
   vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
 
 }

@@ -8,3 +8,7 @@ output "private_subnet" {
 output "vpc_id" {
   value = "${module.dev_vpc.vpc_id}"
 }
+
+output "vpc_cidr" {
+  value = "${module.dev_vpc.vpc_cidr}"
+}

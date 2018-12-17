@@ -14,7 +14,7 @@ resource "aws_elb" "elb" {
   }
 
   tags{
-    name ="BitCoinServer"
+    Name ="BitCoinServer"
   }
 }
 

@@ -9,3 +9,7 @@ output "vpc_id" {
 output "private_subnet" {
   value = "${module.production_vpc.private_subnet}"
 }
+
+output "vpc_cidr" {
+  value = "${module.production_vpc.vpc_cidr}"
+}

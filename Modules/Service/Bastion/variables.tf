@@ -4,7 +4,7 @@ variable "instanceName" {
 
 variable "bastion_ami" {
   description = "AMI for bastion"
-  default     = "ami-06328f1e652dc7605"
+  default     = "ami-0697abcfa8916e673"
   }
 
 variable "env" {
@@ -16,7 +16,7 @@ variable "service_name" {
 }
 
 variable "aws_region" {
-  default = "eu-west-1"  
+  default = "eu-west-3"  
 }
  
 variable "ingress_from_port" {
@@ -40,5 +40,5 @@ variable "root_password" {
 }
 
 variable "my_ip" {
-  default = "89.21.8.5/32"
+  default = "213.86.15.34/32"
 }

@@ -14,7 +14,7 @@ resource "aws_elb" "elb" {
   }
 
   tags{
-    name ="EC2-ELB"
+    Name ="EC2-ELB"
   }
 }
 

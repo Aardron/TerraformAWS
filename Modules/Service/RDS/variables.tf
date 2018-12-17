@@ -10,7 +10,10 @@ variable "aws_region" {
   default = "eu-west-3"  
 }
 
-# variable "vpc_private_subnet_ids" {
-#   default = "${data.terraform_remote_state.vpc.private_subnet}"
-# }
+variable "vpc_path" {
+  default = "Dev/Infrastructure/dev_vpc/terraform.tfstate"
+}
 
+variable "EC2_path" {
+  default = "Dev/Service/RDS/terraform.tfstate"
+}

@@ -21,7 +21,7 @@ resource "aws_security_group_rule" "link_security_group_2" {
   from_port       = 443
   to_port         = 443
   protocol        = "tcp"
-  source_security_group_id = "${data.terraform_remote_state.bast.bastion_elb_id}"
+  cidr_blocks = ["${var.my_ip}"]
   security_group_id = "${aws_security_group.bastion.id}"
 }
 
@@ -30,6 +30,6 @@ resource "aws_security_group_rule" "link_security_group_2_out" {
   from_port       = 443
   to_port         = 443
   protocol        = "tcp"
-  source_security_group_id = "${data.terraform_remote_state.bast.bastion_elb_id}"
+  cidr_blocks = ["${var.my_ip}"]
   security_group_id = "${aws_security_group.bastion.id}"
 }

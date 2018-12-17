@@ -14,7 +14,7 @@ resource "aws_elb" "elb" {
   }
 
   tags{
-    name ="Jenkins-ELB"
+    Name ="Jenkins-ELB"
   }
 }
 
