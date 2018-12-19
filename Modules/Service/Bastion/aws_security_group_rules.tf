@@ -12,7 +12,7 @@ resource "aws_security_group_rule" "link_security_group_1_out" {
   from_port       = 22
   to_port         = 22
   protocol        = "tcp"
-  source_security_group_id = "${aws_security_group.elb.id}"
+  cidr_blocks = ["0.0.0.0/0"]
   security_group_id = "${aws_security_group.instance.id}"
 }
 
@@ -48,6 +48,6 @@ resource "aws_security_group_rule" "link_security_group_3_out" {
   from_port       = 22
   to_port         = 22
   protocol        = "tcp"
-  cidr_blocks = ["${var.my_ip}"]
+  source_security_group_id = "${aws_security_group.instance.id}"
   security_group_id = "${aws_security_group.elb.id}"
 }
