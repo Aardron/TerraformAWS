@@ -5,6 +5,7 @@ variable "instanceName" {
 variable "bastion_ami" {
   description = "AMI for bastion"
   default     = "ami-0697abcfa8916e673"
+                
   }
 
 variable "env" {
