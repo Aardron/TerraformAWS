@@ -45,8 +45,8 @@ resource "aws_security_group_rule" "link_security_group_3" {
 
 resource "aws_security_group_rule" "link_security_group_3_out" {
   type            = "egress"
-  from_port       = 8080
-  to_port         = 8080
+  from_port       = 80
+  to_port         = 80
   protocol        = "tcp"
   source_security_group_id = "${aws_security_group.internet_to_instance.id}"
   security_group_id = "${aws_security_group.elb.id}"
