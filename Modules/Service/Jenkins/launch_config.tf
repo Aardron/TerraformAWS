@@ -2,7 +2,7 @@ resource "aws_launch_configuration" "launch_config" {
   name_prefix     = "${var.service_name}+${var.env}+_config"
   image_id        = "${var.jenkins_ami}"
   instance_type   = "${var.instanceName}"
-  security_groups = ["${aws_security_group.instance.id}"]
+  security_groups = ["${aws_security_group.instance.id}","${aws_security_group.internet_to_instance.id}"]
   key_name = "terraform-chall"
   user_data = <<-EOF
     #!/usr/bin/env sh

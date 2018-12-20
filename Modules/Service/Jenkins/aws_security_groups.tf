@@ -9,8 +9,8 @@ resource "aws_security_group" "elb" {
   vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
 }
 
-# resource "aws_security_group" "bastion" {
-#   name = "terraform-jenkins-bastion-link"
-#   vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
+resource "aws_security_group" "internet_to_instance" {
+  name = "terraform-internet_to_instance"
+  vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
+}
 
-# }
