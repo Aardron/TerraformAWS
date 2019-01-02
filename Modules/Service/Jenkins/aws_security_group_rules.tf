@@ -1,4 +1,4 @@
-resource "aws_security_group_rule" "link_security_group_1" {
+resource "aws_security_group_rule" "link_security_group_1a" {
   type            = "ingress"
   from_port       = 22
   to_port         = 22
@@ -6,6 +6,16 @@ resource "aws_security_group_rule" "link_security_group_1" {
   cidr_blocks = ["10.0.1.11/32"]
   security_group_id = "${aws_security_group.instance.id}"
 }
+
+resource "aws_security_group_rule" "link_security_group_1b" {
+  type            = "ingress"
+  from_port       = 22
+  to_port         = 22
+  protocol        = "tcp"
+  source_security_group_id = "${aws_security_group.elb.id}"
+  security_group_id = "${aws_security_group.instance.id}"
+}
+
 
 resource "aws_security_group_rule" "link_security_group_1_out" {
   type            = "egress"

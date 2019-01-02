@@ -18,3 +18,8 @@ variable "subnet_public_name" {
   default = "public subnet"
 }
 
+variable "vpc_id" {
+  default = "${aws_vpc.vpc.id}"
+}
+
+
