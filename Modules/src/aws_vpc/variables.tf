@@ -10,16 +10,11 @@ variable "vpc_name" {
   default = "vpc"
 }
 
-variable "subnet_private_name" {
-  default = "private subnet"
+variable "Environment" {
+  default = ""
 }
-
-variable "subnet_public_name" {
-  default = "public subnet"
-}
-
 variable "vpc_id" {
-  default = "${aws_vpc.vpc.id}"
+  default = ""
 }
 
 

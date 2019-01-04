@@ -14,7 +14,7 @@ resource "aws_elb" "elb" {
   }
 
   tags{
-    Name ="Bastion"
+    Name ="EC2-ELB"
   }
 }
 

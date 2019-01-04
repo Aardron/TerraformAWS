@@ -5,4 +5,6 @@ variable "vpc_cidr_block" {
 variable "aws_region" {
   default = "eu-west-3"  
 }
+
+
  

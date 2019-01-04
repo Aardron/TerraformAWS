@@ -23,3 +23,20 @@ variable "aws_region" {
 variable "my_ip" {
   default = "213.86.15.34/32"
 }
+
+variable "max_size" {
+  default = 1
+}
+
+variable "min_size" {
+  default = 1
+}
+variable "desired_capacity" {
+  default = 1
+}
+
+variable "key_name" {
+  default = "terraform-chall"
+}
+
+

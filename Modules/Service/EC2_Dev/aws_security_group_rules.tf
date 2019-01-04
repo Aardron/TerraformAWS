@@ -24,6 +24,6 @@ resource "aws_security_group_rule" "link_security_group_2_out" {
   to_port         = 3030
   protocol        = "tcp"
   security_group_id = "${aws_security_group.instance.id}"
-  source_security_group_id = "${data.terraform_remote_state.RDS.RDS_id}"
+  source_security_group_id = "${data.terraform_remote_state.RDS.rds_id}"
 }
 

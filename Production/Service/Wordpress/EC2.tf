@@ -1,5 +1,4 @@
 module "EC2" {
-  source = "../../../modules/Service/EC2"
-  env = "Prod_EC2_"
+  source = "../../../modules/Service/EC2_Prod"
+  env = "Prod"
 }
-

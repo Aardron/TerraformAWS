@@ -1,12 +1,12 @@
 resource "aws_autoscaling_group" "autoscaling_group" {
-  name                      = "${var.service_name}+${var.env}"
-  max_size                  = "2"
-  min_size                  = "2"
-  desired_capacity          = "2"
+  name                      = "${var.service_name}-${var.env}-asg"
+  max_size                  = "${var.max_size}"
+  min_size                  = "${var.min_size}"
+  desired_capacity          = "${var.desired_capacity}"
   force_delete              = false
   launch_configuration      = "${aws_launch_configuration.launch_config.id}"
   load_balancers            = [ "${aws_elb.elb.id}" ]
-  vpc_zone_identifier       = ["${data.terraform_remote_state.vpc.public_subnet}"]
+  vpc_zone_identifier       = ["${data.terraform_remote_state.vpc.private_subnet}"]
 
  tags = [
     {
