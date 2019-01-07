@@ -17,4 +17,13 @@ variable "vpc_id" {
   default = ""
 }
 
+variable "peering_id" {
+  default = ""
+}
+
+variable "peering_destination" {
+  default = []
+}
+
+
 

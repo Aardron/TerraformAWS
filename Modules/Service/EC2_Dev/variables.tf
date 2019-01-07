@@ -34,3 +34,7 @@ variable "min_size" {
 variable "desired_capacity" {
   default = 2
 }
+
+variable "key_name" {
+  default = "terraform-chall"
+}

@@ -7,6 +7,13 @@ resource "aws_elb" "elb" {
   subnets         = ["${data.terraform_remote_state.vpc.public_subnet}"]
   
   listener {
+    instance_port     = 8080
+    instance_protocol = "http"
+    lb_port           = 80
+    lb_protocol       = "http"
+  }
+
+listener {
     instance_port     = 22
     instance_protocol = "tcp"
     lb_port           = 22
@@ -14,7 +21,7 @@ resource "aws_elb" "elb" {
   }
 
   tags{
-    Name ="EC2-ELB"
+    Name ="EC2-Dev-ELB"
   }
 }
 

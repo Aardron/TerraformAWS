@@ -21,7 +21,7 @@ variable "aws_region" {
 }
 
 variable "my_ip" {
-  default = "213.86.15.34/32"
+  default = "89.21.8.5/32"
 }
 
 variable "max_size" {
